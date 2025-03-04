@@ -23,24 +23,27 @@ export async function POST(request) {
 
     // Create a transporter using Gmail SMTP settings
     const transporter = nodemailer.createTransport({
-      service: "gmail", // Use Gmail service
-      host: "smtp.gmail.com", // Explicitly set SMTP host for Gmail
-      port: 465, // SMTP SSL port
-      secure: true, // true for SSL
+      service: "gmail",
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true,
       auth: {
-        user: "info@innovatebathroomrenovations.com.au", // Your Google Workspace email address
-        pass: process.env.EMAIL_PASSWORD, // Your email password or App Password
+        user: "info@innovatebathroomrenovations.com.au",
+        pass: process.env.EMAIL_PASSWORD,
       },
     });
 
     // Email options
     const mailOptions = {
-      from: "info@innovatebathroomrenovations.com.au", // Your email address
-      replyTo: email, // Set the reply-to to the user's email address
-      to: "info@innovatebathroomrenovations.com.au", // Your receiving email address
+      from: "info@innovatebathroomrenovations.com.au",
+      replyTo: email,
+      to: "info@innovatebathroomrenovations.com.au",
       subject: `New Quote Request from ${fullName}`,
       html: `
         <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #0770B5; background-color: #f9fafb; padding: 20px; border-radius: 10px; border: 1px solid #e0e6ed;">
+          <div style="text-align: center; margin-bottom: 20px;">
+            <img src="https://res.cloudinary.com/den67ouct/image/upload/v1740960597/IBR_ii2xqi.png" alt="Innovate Bathroom Renovations Logo" style="max-width: 200px;">
+          </div>
           <h2 style="color: #06A3D7; text-align: center; margin-bottom: 20px;">New Quote Request</h2>
           <p style="font-size: 16px; text-align: center; margin-bottom: 20px;">
             You have received a new quote request from your website. Please review the details below and follow up promptly.
@@ -65,9 +68,7 @@ export async function POST(request) {
             </tr>
             <tr style="background-color: #f3f6fa;">
               <td style="padding: 15px; border: 1px solid #ddd; font-weight: bold;">Interested Services</td>
-              <td style="padding: 15px; border: 1px solid #ddd;">${services.join(
-                ", "
-              )}</td>
+              <td style="padding: 15px; border: 1px solid #ddd;">${services.join(", ")}</td>
             </tr>
             <tr>
               <td style="padding: 15px; border: 1px solid #ddd; font-weight: bold;">Message</td>
