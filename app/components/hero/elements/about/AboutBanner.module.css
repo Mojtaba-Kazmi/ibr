@@ -1,0 +1,121 @@
+/* Main container styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  text-align: center;
+  padding: 0 0 2rem;
+}
+
+/* Heading 1 styling */
+.textContent h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #06A3D7;
+}
+
+/* Heading 2 styling */
+.textContent h2 {
+  font-family: var(--font-inter);
+  font-weight: 900;
+  color: #0770B5;
+  text-align: center;
+  font-size: 2.6rem;
+  margin-top: 0; /* Ensure no margin on top */
+}
+
+/* Paragraph styling */
+.textContent p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin: 0 2rem;
+  color: #333333;
+}
+
+/* Tablet and smaller laptops (up to 1024px wide) */
+@media (max-width: 1024px) {
+  .container {
+    margin-top: 15%;
+    padding: 2.5rem 0;
+  }
+
+  .textContent h2 {
+    font-size: 2.6rem;
+  }
+}
+
+/* Small tablets and large mobile phones (up to 768px wide) */
+@media (max-width: 768px) {
+  .container {
+    margin-top: 10%;
+    padding: 2rem 1rem; /* Reduce padding for medium screens */
+  }
+
+  .textContent h1 {
+    font-size: 1.5rem;
+  }
+
+  .textContent h2 {
+    font-size: 2.6rem;
+  }
+
+  .textContent p {
+    font-size: 1.4rem; /* Adjust paragraph font size */
+    margin: 0 1.7rem;
+  }
+}
+
+/* Mobile phones (up to 480px wide) */
+@media (max-width: 480px) {
+  .container {
+    margin-top: 15%;
+    padding: 0 1rem;
+  }
+
+  .textContent h1 {
+    font-size: 1.2rem;
+  }
+
+  .textContent h2 {
+    font-size: 2.2rem;
+  }
+
+  .textContent p {
+    font-size: 1rem;
+    margin: 0 1rem;
+  }
+}
+
+/* Larger tablets and small desktops (769px to 1023px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    margin-top: 20%;
+    padding: 0 4rem;
+  }
+
+  .textContent h1 {
+    font-size: 1.5rem;
+  }
+
+  .textContent h2 {
+    font-size: 2.6rem;
+  }
+}
+
+/* Desktops (1024px and above) */
+@media (min-width: 1025px) {
+  .container {
+    margin-top: 8.5%;
+  }
+
+  .textContent h1 {
+    font-size: 2.2rem;
+  }
+
+  .textContent h2 {
+    font-size: 5rem;
+  }
+}

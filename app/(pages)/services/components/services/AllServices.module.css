@@ -1,0 +1,211 @@
+/* Container for the services grid */
+.servicesGrid {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping to the next row */
+  justify-content: center; /* Center content in the grid */
+  background-color: #ffffff; /* Background color for the grid */
+  box-sizing: border-box; /* Include padding in calculations */
+  gap: 15px; /* Default gap for mobile */
+  padding: 1rem; /* Default padding for mobile */
+}
+
+/* Wrapper for each row of articles */
+.wrapper {
+  display: flex;
+  flex-wrap: wrap; /* Ensure items wrap onto new rows */
+  justify-content: space-between; /* Add even spacing between items */
+  gap: 15px; /* Default space between articles */
+  max-width: 100%; /* Full width by default */
+  margin: 0 auto; /* Center container */
+}
+
+/* Individual article styling (default: mobile) */
+.article {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 0 30px 0;
+  text-align: center;
+  flex: 1 1 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
+}
+
+.article:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+/* Image styling */
+.article header img {
+  width: 450px;
+  height: 250px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Title */
+.article h2 {
+  font-size: 1.3rem;
+  margin: 1rem 6rem;
+  color: #0770B5;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.article h2 a {
+  color: inherit;
+  font-weight: bold;
+}
+
+/* Article description */
+.article p {
+  margin: 0 1rem;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Continue reading link */
+.article a {
+  margin-top: 10px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Pagination styling */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 2rem; /* Adjusted padding for small screens */
+}
+
+/* Pagination button */
+.pagination button {
+  background-color: #0770B5;
+  color: white;
+  font-size: 0.875rem; /* Responsive font size */
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #06A3D7;
+}
+
+/* Disabled pagination button */
+.pagination button[disabled] {
+  background-color: #f5f4f6;
+  cursor: not-allowed;
+}
+
+/* Read More link */
+.continueReading {
+  color: #0770B5 !important;
+  font-weight: 600;
+  margin-top: 15px !important;
+  cursor: pointer;
+  font-size: 20px;
+  display: inline-block;
+  transition: color 0.3s ease;
+  text-transform: capitalize !important;
+
+}
+
+.continueReading:hover {
+  color: #06A3D7 !important;
+  text-decoration: none;
+}
+
+/* Tablet-specific adjustments */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .servicesGrid {
+    gap: 20px; /* Moderate gap for better spacing on tablets */
+    padding: 1.5rem; /* Adjusted padding for tablets */
+    max-width: 100%; /* Restrict width slightly for better alignment */
+    margin: 0 auto; /* Center the grid */
+  }
+
+  .wrapper {
+    gap: 20px; /* Adjust spacing between rows for tablets */
+    max-width: 100%; /* Allow full width on tablets */
+  }
+
+  .article {
+    flex: 1 1 calc(50% - 20px); /* Two articles per row on tablets */
+    max-width: calc(50% - 10px); /* Maintain spacing between items */
+    padding: 0;
+  }
+
+  .article h2 a {
+    font-size: 1.15rem; /* Adjusted font size for readability */
+  }
+
+  .article p {
+    font-size: 1.1rem; /* Slightly smaller paragraph text */
+    line-height: 1.4; /* Adjust line-height for tighter layout */
+  }
+
+  .pagination {
+    gap: 15px; /* Adjust gap between pagination buttons */
+    padding: 1.5rem; /* Slightly reduced padding for tablets */
+  }
+
+  .pagination button {
+    font-size: 0.875rem; /* Keep buttons compact */
+    padding: 8px 12px; /* Adjust button size for tablets */
+  }
+
+  /* Read More link */
+  .continueReading {
+    color: #0770B5 !important;
+    font-weight: 600;
+    padding: 2rem;
+    cursor: pointer;
+    font-size: 20px;
+    display: inline-block;
+    transition: color 0.3s ease;
+    text-transform: capitalize !important;
+  }
+
+  .continueReading:hover {
+    color: #06A3D7 !important;
+    text-decoration: none;
+  }
+}
+
+/* For desktops (large screens) */
+@media (min-width: 1025px) {
+  .article {
+    flex: 1 1 calc(33.33% - 20px); /* Three articles per row */
+    max-width: calc(33.33% - 20px);
+  }
+
+  .servicesGrid {
+    gap: 25px; /* Larger gap for desktops */
+    padding: 2rem; /* Additional padding */
+  }
+
+  .wrapper {
+    max-width: 1200px; /* Restrict maximum width */
+    margin: 0 auto; /* Center the grid */
+    gap: 30px; /* Wider gaps between articles */
+  }
+}

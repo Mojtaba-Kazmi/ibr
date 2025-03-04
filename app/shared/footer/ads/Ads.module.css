@@ -1,0 +1,90 @@
+.ads {
+  position: relative;
+  width: 100%; /* Full width by default */
+  margin: 0 auto; /* Center horizontally */
+  overflow: hidden;
+  background-color: transparent; /* Keep background for visibility */
+  max-width: 200px; /* Optional: Limit the maximum width */
+  min-height: 450px; /* Minimum height for smaller devices */
+  display: flex; /* Flexbox ensures content is properly aligned */
+  justify-content: center; /* Center ads horizontally */
+  align-items: center; /* Center ads vertically */
+}
+/* Card container */
+.card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Start as invisible */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  animation: rotateAds 8s infinite;
+  transform-origin: top center;
+}
+
+/* Card animation delay */
+.card:nth-child(1) {
+  animation-delay: 0s; /* First card starts immediately */
+}
+.card:nth-child(2) {
+  animation-delay: 4s; /* Second card starts after 4 seconds */
+}
+
+/* Keyframes for rotating ads */
+@keyframes rotateAds {
+  0%, 49% {
+    opacity: 1;
+    transform: scale(1); /* Fully visible */
+  }
+  50% {
+    opacity: 0;
+    transform: scale(0.9); /* Fade out and scale down slightly */
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+/* Image container inside cards */
+.card .image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio, crop if needed */
+  border-radius: 8px; /* Optional: rounded corners for better aesthetics */
+}
+
+/* Responsive Design Adjustments */
+
+/* For small devices (mobile) */
+@media (max-width: 599px) {
+  .ads {
+    min-height: 480px; /* Ensure enough height on small screens */
+    max-width: 200px; /* Use most of the screen width */
+  }
+}
+
+/* For tablets (600px to 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .ads {
+    min-height: 480px; /* Slightly larger height for tablets */
+    max-width: 200px; /* Adjust size for tablets */
+  }
+}
+
+
+/* For desktops (1025px and up) */
+@media (min-width: 1025px) {
+  .ads {
+    min-height: 450px; /* Fixed minimum height for desktops */
+    max-width: 200px; /* Restrict width to maintain layout */
+  }
+}

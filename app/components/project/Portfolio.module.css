@@ -1,0 +1,383 @@
+/* General container styles */
+.container {
+  padding: 50px 0; /* Reduced padding for mobile */
+  position: relative;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 1.5rem; /* Smaller font size for mobile */
+  margin-left: 1.5rem; /* Adjusted margin for smaller screens */
+  padding-top: 1.5rem;
+  color: #0770B5;
+}
+
+/* Carousel Styling */
+.carousel {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  flex-wrap: nowrap;
+  gap: 10px; /* Smaller gap for mobile */
+  padding: 20px 0;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* Card styles */
+.card {
+  flex: 0 0 63%; /* Cards take up more space on mobile */
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  max-width: 400px; /* Adjust size for mobile */
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.spacer {
+  flex-shrink: 0;
+  width: 0; /* No space by default */
+}
+
+/* Image styling */
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 180%; /* iPhone-like 2:3 aspect ratio */
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.imageWrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #076fb548; /* Semi-transparent black */
+  border-radius: 10px; /* Match the border radius of the image */
+  z-index: 1; /* Ensure it appears above the image */
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Keeps image proportional and fills the container */
+  border-radius: 10px; /* Ensures the image respects rounded corners */
+}
+
+/* Text overlay styling */
+.textOverlay {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  color: white;
+  z-index: 2; /* Ensure overlay content is above the image */
+}
+
+.imageTitle {
+  font-size: 1rem;
+  font-weight: 200;
+  z-index: 3;
+}
+
+.imageDescription {
+  font-size: 1.2rem;
+  margin: 0;
+  margin-right: 1rem;
+  z-index: 3;
+}
+
+/* Plus sign styles */
+.plusCircle {
+  position: absolute;
+  bottom: 2%;
+  right: 5%;
+  background: transparent;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 3;
+}
+
+/* Navigation buttons */
+.navButtons {
+  position: absolute;
+  bottom: 10px;
+  right: 5%;
+  display: flex;
+  gap: 5px;
+}
+
+.navButton {
+  background: #0770B5;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.navButton:disabled {
+  background: #e9e6ea;
+}
+
+/* Modal container */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #0770B5; /* Semi-transparent overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.modal::before {
+  content: "";
+  position: fixed; /* Ensures blur effect covers the entire screen */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(8, 19, 51, 0.531); /* Semi-transparent overlay */
+  backdrop-filter: blur(15px); /* Blur effect for background */
+  z-index: -1; /* Keeps the blur behind modal content */
+}
+
+/* Modal content */
+.modalContent {
+  background-color: #fff;
+  position: relative; /* Makes it a containing block for absolute positioning */
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  max-width: 90%; /* Ensure modal scales well on different screens */
+  width: auto;
+  height: auto;
+  margin: auto;
+  overflow: hidden;
+}
+
+.modal img {
+  width: 100%; /* Ensures image scales with the modal */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 20px 20px 0 0; /* Matches the modal's top corners */
+}
+
+/* Wrapper for the close button */
+.closeWrapper {
+  position: absolute; /* Positioned relative to modalContent */
+  top: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* Pushes the close button to the right */
+  padding: 10px; /* Ensures spacing from the modal edges */
+  box-sizing: border-box;
+  z-index: 10; /* Keeps it above modal content */
+}
+
+/* Close button styles */
+.modalClose {
+  position: fixed; /* Stays fixed in the viewport */
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #0770B5;
+  z-index: 11; /* Higher than the wrapper for clickability */
+}
+
+.modalDetails {
+  padding: 0 !important; /* Adds spacing inside the modal */
+  text-align: left; /* Aligns all text to the left */
+}
+
+.modalDetails h2 {
+  font-size: 1rem; /* Slightly larger for titles */
+  font-weight: 200;
+  margin-bottom: 10px;
+}
+
+.modalDetails p {
+  font-size: 1rem;
+  font-weight: 600; /* More emphasis on titles */
+  margin: 0;
+  line-height: 1.5; /* Improves readability */
+  color: #0770B5; /* Darker text for better contrast */
+}
+
+.modalDetails figcaption {
+  font-size: 1rem !important;
+  font-weight: 400;
+  color: #666; /* Slightly lighter text for captions */
+  margin: 30px 0px 30px 0;
+}
+
+.imageGallery {
+  display: flex; /* Use grid for better image alignment */
+  flex-direction: column;
+  gap: 20px; /* Increase gap for better spacing between images */
+  justify-items: center; /* Center items within each grid cell */
+  align-items: center;
+}
+
+.modalImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  object-fit: cover; /* Ensure images maintain their aspect ratio */
+  cursor: pointer;
+}
+
+.modalImage:hover {
+  transform: scale(1.05); /* Zoom-in effect on hover */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Adjustments for small screens */
+@media (max-width: 768px) {
+  .modalDetails {
+    padding: 15px; /* Reduced padding for smaller screens */
+  }
+
+  .modalDetails h2 {
+    font-size: 0.9rem;
+  }
+
+  .modalDetails p {
+    font-size: 1.5rem;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    padding: 120px 0;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    margin-left: 5rem;
+  }
+
+  .carousel {
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .card {
+    max-width: 400px;
+  }
+
+  .navButtons {
+    bottom: 20px;
+    right: 10%;
+  }
+
+  .plusCircle {
+    bottom: 2%;
+    right: 5%;
+    font-size: 2rem;
+  }
+
+  .spacer {
+    flex-shrink: 0;
+    width: 60px;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1025px) {
+  /* General container styles */
+  .container {
+    padding: 30px 0;
+    position: relative;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    display: flex;
+    flex-direction: column;
+  }
+  .title {
+    font-size: 2.5rem;
+    margin-left: 9.7rem;
+  }
+
+  .carousel {
+    gap: 30px;
+    padding: 40px 0;
+  }
+
+  .card {
+    flex: 0 0 18%;
+    max-width: 400px;
+  }
+
+  .navButtons {
+    bottom: 20px;
+    right: 25%;
+  }
+
+  .plusCircle {
+    bottom: 2%;
+    right: 5%;
+    font-size: 2.5rem;
+  }
+
+  .spacer {
+    flex-shrink: 0;
+    width: 125px;
+  }
+
+  .modalContent {
+    max-width: 35rem;
+  }
+
+  .modalDetails h2 {
+    font-size: 1rem; /* Slightly larger for titles */
+    font-weight: 200;
+    margin-bottom: 10px;
+  }
+
+  .modalDetails p {
+    font-size: 2rem;
+    font-weight: 600; /* More emphasis on titles */
+    margin: 0;
+    line-height: 1.5; /* Improves readability */
+    color: #0770B5; /* Darker text for better contrast */
+  }
+
+  .modalDetails figcaption {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #666; /* Slightly lighter text for captions */
+    margin: 30px 0px 30px 0;
+  }
+}

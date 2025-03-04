@@ -1,0 +1,154 @@
+/* Default: Mobile styles */
+.businessSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 2rem; /* Padding optimized for mobile */
+  border-radius: 8px;
+  margin: 0.2rem;
+}
+
+.businessContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.businessText {
+  width: 100%;
+  text-align: center;
+}
+
+.businessTitle {
+  font-size: 1.5rem; /* Mobile-friendly font size */
+  font-weight: bold;
+  margin-bottom: 20px; /* Slightly reduced spacing for mobile */
+  padding-bottom: 8px;
+  color: #0770B5;
+}
+
+.businessList {
+  margin-top: 20px; /* Optimized spacing for mobile */
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.businessListItem {
+  margin-bottom: 12px;
+  font-size: 1rem; /* Mobile-friendly font size */
+  position: relative;
+  color: #333;
+}
+
+.businessListItem:before {
+  content: "";
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1rem;
+}
+
+.ctaButton {
+  background-color: #0770B5;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.ctaButton:hover {
+  background-color: #0770B5; /* Slightly darker on hover */
+}
+
+.businessImageWrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.businessImage {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.businessImageWrapper:hover .businessImage {
+  transform: scale(1.05);
+}
+
+/* Medium to large tablets (600px - 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .businessSection {
+    padding: 3rem; /* Increased padding for tablets */
+    margin: 0.5rem;
+  }
+
+  .businessTitle {
+    font-size: 1.8rem; /* Adjust font size for tablets */
+  }
+
+  .businessListItem {
+    font-size: 1.2rem; /* Larger font for readability */
+  }
+
+  .ctaButton {
+    padding: 10px 20px; /* Larger button size for tablets */
+  }
+
+  .businessImageWrapper {
+    max-width: 90%; /* Restrict width on tablets */
+  }
+}
+
+/* Desktop and larger screens (1025px and up) */
+@media (min-width: 1025px) {
+  .businessSection {
+    padding: 6rem; /* Larger padding for desktops */
+  }
+
+  .businessContainer {
+    flex-direction: row; /* Switch to row layout */
+    align-items: flex-start;
+    max-width: 1200px;
+    gap: 2rem; /* Increase spacing between sections */
+  }
+
+  .businessText {
+    width: 50%;
+    text-align: left;
+  }
+
+  .businessTitle {
+    font-size: 2rem; /* Larger title for desktops */
+  }
+
+  .businessListItem {
+    font-size: 1.4rem; /* Enhanced readability on larger screens */
+  }
+
+  .ctaButton {
+    width: auto;
+    padding: 12px 24px; /* Bigger button for desktops */
+  }
+
+  .businessImageWrapper {
+    max-width: 50%;
+    margin-top: 6.5rem;
+  }
+}

@@ -1,0 +1,306 @@
+.blogPage {
+  background-color: #fff;
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  margin-top: 10rem;
+  padding-bottom: 4rem;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Wrapper for the content */
+.wrapper {
+  position: relative; /* To keep the background and content properly layered */
+}
+
+/* Hero background container - controls only the background color */
+.heroBackground {
+  width: 100%;
+  background-color: rgb(245, 244, 246); /* Background color */
+  height: 100vh; /* You can adjust this as needed */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0; /* Keeps the background behind the hero content */
+}
+
+/* Hero section layout */
+.heroHeader {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Stacks content vertically for small screens */
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 0 0 0; /* Adjust padding for responsiveness */
+  text-align: left;
+  z-index: 1; /* Keeps the content above the background */
+}
+
+/* Back button styling */
+.backButton {
+  position: absolute;
+  top: 3.5rem; /* Adjusted top spacing */
+  left: 1rem; /* Adjusted left spacing */
+  padding: 1rem 0.1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: #0770B5;
+  background-color: transparent;
+}
+
+/* Thumbnail Image */
+.thumbnail {
+  width: 92%; /* Image scales with screen width */
+  height: 55vh;
+  object-fit: cover; /* Ensures the image scales nicely */
+  border-radius: 8px;
+  margin-bottom: 0;
+}
+
+/* Blog Info */
+.blogInfo {
+  text-align: left;
+  margin-top: 1rem;
+  padding: 0 1rem; /* Adjust padding for responsiveness */
+  color: #0770B5;
+}
+
+/* Blog content layout */
+.blogContent {
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #333;
+}
+
+.blogContent h2 {
+  color:#0770B5;
+}
+
+.blogContent ul {
+  line-height: 1.8;
+  list-style-type: none;
+  padding-left: 10px; /* Reduce overall left spacing */
+}
+
+/* Related articles section */
+.relatedSection {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.relatedSection h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  padding-top: 4rem;
+  color:#0770B5;
+}
+
+.relatedList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+.relatedList a {
+  text-decoration: none;
+}
+
+.relatedCard {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border: 0.1rem solid #f5f4f6;
+  border-radius: 8px;
+  padding: 15px;
+  width: 100%;
+  max-width: 450px;
+  transition: transform 0.3s ease;
+  color: #333;
+}
+
+.relatedCard:hover {
+  transform: scale(1.05);
+}
+
+.relatedThumbnail {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.loadMoreButton {
+  background-color: transparent;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  margin: 50px auto;
+  display: block;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.loadMoreButton:hover {
+  color: #0770B5;
+}
+
+@media (min-width: 768px) {
+
+  .heroHeader {
+    flex-direction: row; /* Row layout for larger screens */
+    padding: 16rem 1rem 1rem 1rem; /* Adjusted padding for tablets */
+  }
+
+  /* Hero background container - controls only the background color */
+  .heroBackground {
+    width: 100%;
+    height: 72vh; /* You can adjust this as needed */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Keeps the background behind the hero content */
+  }
+
+  /* Back button styling */
+  .backButton {
+    top: 9rem;
+    left: 6rem;
+  }
+
+  .blogInfo {
+    text-align: left; /* Left-align text on large screens */
+    margin-top: 0;
+    order: 1; /* Ensure blog info appears below image on larger screens */
+  }
+
+  .thumbnail {
+    flex: 1 1 45%; /* Image width adjusted for large screens */
+    max-width: 700px;
+  }
+
+  .relatedSection h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding-top: 7rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .blogPage {
+    margin-top: 5rem;
+  }
+
+  .wrapper {
+    padding-top: 3rem; /* Additional padding for smaller screens */
+    height: auto;
+  }
+
+  .blogInfo {
+    order: -1;
+    text-align: left; /* Center the text on mobile */
+  }
+
+  .relatedThumbnail {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .relatedCard {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 25px;
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* Small Tablets (e.g., iPad Mini) */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .blogPage {
+    margin-top: 1rem;
+  }
+
+  .heroHeader {
+    flex-direction: column; /* Keep the vertical layout for smaller tablets */
+    padding: 12rem 1rem 1rem 1rem; /* Adjusted padding */
+  }
+
+  .backButton {
+    top: 9rem;
+    left: 2.2rem;
+  }
+
+  .thumbnail {
+    flex: 1 1 50%; /* Adjusted for tablet sizes */
+    max-width: 900px;
+  }
+
+  .blogInfo {
+    order: -1; /* Ensure blog info appears below image on tablets */
+  }
+
+  .relatedSection h2 {
+    padding-top: 7rem;
+  }
+
+  .relatedList {
+    gap: 15px; /* Reduced gap on tablets */
+  }
+
+}
+
+/* Large Tablets (e.g., iPad Pro, larger screens) */
+@media (min-width: 912px) and (max-width: 1368px) {
+
+  .blogPage {
+    margin-top: 3rem;
+  }
+
+  .heroHeader {
+    flex-direction: column; /* Horizontal layout for larger tablets */
+    padding: 16rem 1rem 1rem 1rem;
+  }
+
+  .backButton {
+    top: 10rem;
+    left: 7rem;
+  }
+
+  .thumbnail {
+    flex: 1 1 45%; /* Adjusted for larger tablet screens */
+    max-width: 700px;
+  }
+
+  .relatedSection h2 {
+    padding-top: 8rem; /* Adjusted heading spacing for larger tablets */
+  }
+
+  .relatedList {
+    gap: 20px; /* Slightly larger gap for larger tablets */
+  }
+
+}

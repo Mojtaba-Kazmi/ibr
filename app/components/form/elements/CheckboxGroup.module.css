@@ -1,0 +1,87 @@
+/* Wrapper for each checkbox */
+.checkboxWrapper {
+  display: flex;
+  align-items: center; /* Align circle and text vertically */
+  position: relative;
+}
+
+/* Reset default checkbox styles and apply custom styling */
+.checkboxWrapper input[type="checkbox"] {
+  appearance: none; /* Reset browser default */
+  -webkit-appearance: none; /* Safari compatibility */
+  -moz-appearance: none; /* Firefox compatibility */
+  width: 20px; /* Ensure equal width and height for a circle */
+  height: 20px;
+  margin-right: 0.5rem; /* Space between checkbox and label */
+  border: 2px solid #ccc;
+  border-radius: 50%; /* Force circular shape */
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+  box-shadow 0.3s ease;
+  outline: none;
+  display: inline-block;
+  vertical-align: middle; /* Align with text */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  position: relative; /* Contain the inner dot properly */
+}
+
+/* Checked state: Inner dot */
+.checkboxWrapper input[type="checkbox"]:checked::after {
+  content: ""; /* Empty content for the visual dot */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px; /* Inner dot size */
+  height: 10px;
+  background-color: #0770B5; /* Match the selected state */
+  border-radius: 50%; /* Circular dot */
+  transform: translate(-50%, -50%); /* Perfect centering */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for the dot */
+}
+
+/* Checked state: Outer border */
+.checkboxWrapper input[type="checkbox"]:checked {
+  border-color: #0770B5;
+  background-color: #fff; /* Optional: Keep contrast */
+  box-shadow: 0 4px 8px rgba(10, 106, 86, 0.2); /* Emphasize selected state */
+}
+
+/* Label for the checkbox */
+.checkboxLabel {
+  font-size: 1rem;
+  font-weight: 500;
+  user-select: none;
+  color: #333;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 1rem; /* Remove extra margin */
+  display: inline-block;
+  vertical-align: middle; /* Align with the checkbox */
+}
+
+/* Label hover effect */
+.checkboxWrapper:hover .checkboxLabel {
+  color: #06A3D7;
+}
+
+/* Checkbox hover effect */
+.checkboxWrapper input[type="checkbox"]:hover {
+  border-color: #06A3D7;
+  box-shadow: 0 4px 8px rgba(10, 106, 86, 0.2); /* Highlight on hover */
+}
+
+.servicePrompt {
+  color: #0770B5;
+}
+
+@media (min-width: 1025px) {
+  /* Label for the checkbox */
+  .checkboxLabel {
+    font-size: 1.2rem;
+  }
+  .servicePrompt {
+    font-size: 1.4rem;
+    color: #0770B5;
+  }
+}

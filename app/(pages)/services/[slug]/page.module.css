@@ -1,0 +1,313 @@
+/* Main page layout - Mobile first */
+.servicesPage {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px; /* Adjusted for mobile */
+  background-color: white;
+  border-radius: 8px;
+  margin: 0.2rem;
+  padding: 10rem 1rem 1rem 1rem;
+}
+
+/* Wrapper to center content */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%; /* Full width for mobile */
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Sidebar styles */
+.sidebar {
+  order: 2;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #0770B5;
+}
+
+/* Service list styling */
+.servicesList ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.servicesList ul li p {
+  margin: 0 0 5px 0;
+  color: #0770B5;
+  text-decoration: none;
+  font-size: 1.1rem; /* Slightly smaller for mobile */
+  padding: 10px;
+  display: block;
+  border-radius: 8px;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease;
+  background-color: rgb(245, 244, 246);
+}
+
+.servicesList ul li p:hover,
+.servicesList ul li p.active {
+  background-color: #06A3D7;
+  color: #fff;
+}
+
+/* Contact section styling */
+.contactSection {
+  margin-top: 10px;
+  padding: 15px;
+  background-color: #0770B5;
+  text-align: center;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.contactSection h3 {
+  font-size: 1.4rem; /* Smaller for mobile */
+  margin-bottom: 10px;
+}
+
+.contactSection button {
+  background-color: #06A3D7;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contactSection button:hover {
+  background-color: #06A3D7;
+}
+
+/* Main content styles */
+.mainContent {
+  order: 1;
+  width: 100%;
+}
+
+/* Service details styling */
+.serviceDetail {
+  max-width: 100%; /* Full width for mobile */
+  margin: 0 auto;
+  padding: 15px;
+  line-height: 1.6;
+}
+
+.serviceHeader h1 {
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 1.5rem; /* Adjusted for mobile */
+  font-weight: bold;
+  color: #0770B5;
+}
+
+/* Image styles */
+.imageContainer {
+  text-align: left;
+}
+
+.thumbnail {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Service content styles */
+.serviceContent {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.serviceContent ul {
+  font-size: 1rem;
+  line-height: 1.6;
+  list-style-type: none;
+  padding-left: 10px;
+ 
+}
+
+.serviceContent h2 {
+  font-size: 1.2rem;
+  color: #0770B5;
+}
+
+.serviceContent h3 {
+  font-size: 1.1rem;
+  color: #0770B5;
+}
+
+/* Tablet styles */
+@media (min-width: 576px) and (max-width: 1024px) {
+  .servicesPage {
+    padding: 6rem 2rem 2rem 2rem; /* Adjust padding for tablets */
+    margin: 0.2rem;
+    border-radius: 8px; /* Keep consistent with mobile */
+  }
+
+  .wrapper {
+    max-width: 90%; /* Slightly wider than mobile but not full width */
+    margin: 0 auto;
+    text-align: left; /* Ensure left-alignment remains */
+  }
+
+  .sidebar {
+    order: 2; /* Sidebar remains at the bottom */
+    width: 100%; /* Full width for consistency */
+    margin-top: 1rem;
+  }
+
+  .sidebar a {
+    font-size: 1.2rem; /* Slightly larger font for better visibility */
+  }
+
+  .servicesList ul li p {
+    font-size: 1.2rem; /* Adjust font size for tablet readability */
+    padding: 12px;
+    line-height: 1.5; /* Ensure spacing for readability */
+  }
+
+  .contactSection {
+    margin-top: 10px;
+    padding: 20px; /* Slightly larger padding */
+    font-size: 1.2rem; /* Adjust font size */
+    border-radius: 8px;
+  }
+
+  .contactSection h2 {
+    font-size: 1.4rem; /* Adjust header size */
+    margin-bottom: 10px;
+  }
+
+  .contactSection button {
+    padding: 12px 24px; /* Slightly larger buttons for tablets */
+    font-size: 1.2rem;
+  }
+
+  .mainContent {
+    order: 1; /* Main content remains first */
+    width: 100%; /* Full width for main content */
+  }
+
+  .serviceDetail {
+    max-width: 90%; /* Adjusted for slightly wider screens */
+    padding: 20px;
+    line-height: 1.6;
+  }
+
+  .serviceHeader h1 {
+    font-size: 1.8rem; /* Slightly larger font size */
+    margin-bottom: 20px;
+  }
+
+  .thumbnail {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 1rem 0;
+  }
+
+  .serviceContent {
+    font-size: 1.1rem; /* Adjust font size */
+    line-height: 1.7;
+    color: #333;
+  }
+
+  .serviceContent ul {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    padding-left: 10px; /* Keep consistent with mobile */
+  }
+
+  .serviceContent h2 {
+    font-size: 1.3rem; /* Adjust subheader size */
+  }
+  .serviceContent h3 {
+    font-size: 1.2rem;
+    color: #0770B5;
+  }
+
+  .contactSection h3 {
+    font-size: 1.6rem; /* Adjust header size */
+    margin-bottom: 10px;
+  }
+
+}
+
+/* Desktop styles */
+@media (min-width: 1025px) {
+  .servicesPage {
+    flex-direction: row; /* Change to row for larger screens */
+    padding: 12rem 0; /* Desktop padding remains as is */
+  }
+
+  .wrapper {
+    flex-direction: row; /* Change to row for larger screens */
+    max-width: 1200px;
+    text-align: left;
+  }
+
+  .sidebar {
+    order: 1;
+    width: 25%; /* Sidebar on the left for larger screens */
+    border-right: solid 1px #f5f4f6;
+    padding: 0rem 1.5rem;
+    margin-top: 3.5rem;
+  }
+
+  .mainContent {
+    order: 2;
+    width: 75%; /* Main content takes up 75% on larger screens */
+  }
+
+  .serviceHeader h1 {
+    font-size: 2rem;
+  }
+
+  .serviceContent h2 {
+    font-size: 1.6rem;
+    color: #0770B5;
+  }
+
+  .serviceContent h3 {
+    font-size: 1.4rem;
+    color: #0770B5;
+  }
+
+  .contactSection {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f5f4f6;
+    color: #0770B5;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .contactSection h3 {
+    font-size: 1.6rem; /* Adjust header size */
+    margin-bottom: 10px;
+  }
+
+  .imageContainer {
+    margin: 20px 0;
+  }
+  .serviceContent {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  .serviceContent ul {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    list-style-type: none;
+    padding-left: 10px;
+  }
+}

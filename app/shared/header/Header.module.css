@@ -1,0 +1,230 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  background-color: transparent;
+  min-height: 70px; /* Set a minimum height */
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.scrolled {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  transform: translateY(0);
+  opacity: 1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.branding {
+  flex: 1;
+}
+
+.scrolled .logoImage {
+  width: 300px; 
+  height: auto; 
+  margin: 1rem 0 0 0;
+}
+
+.logoImage {
+  width: 300px !important;
+  height: auto;
+  margin: 1rem 0 0 0;
+}
+
+/* Fullscreen Navbar */
+.navbarMenu {
+  position: fixed;
+  top: -100vh; /* Initially off-screen */
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: transparent; /* Default to transparent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: top 0.3s ease-in-out, background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.navbarMenu.active {
+  top: 0; /* Slide the menu in */
+  background-color: rgba(255, 255, 255, 0.8); /* Set the background color when active */
+  backdrop-filter: blur(5px);
+}
+
+.navbarMenu.exit {
+  top: -100vh; /* Slide the menu out */
+  background-color: transparent; /* Ensure background is transparent when exiting */
+}
+
+/* Burger Menu Styles */
+.burgerMenu {
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #0770B5;
+  cursor: pointer;
+  z-index: 1100; /* Higher than navbarMenu */
+}
+
+.burgerMenu:hover {
+  background-color: #06A3D7;
+}
+
+.burgerMenu span {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.burgerMenu span,
+.burgerMenu span::before,
+.burgerMenu span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background-color: #fff;
+  transition: all 0.4s ease;
+  right: 0;
+}
+
+.burgerMenu.active span {
+  background-color: transparent;
+}
+
+.burgerMenu span::before {
+  width: 20px;
+  top: -8px;
+  right: 0;
+}
+
+.burgerMenu span::after {
+  width: 15px;
+  bottom: -8px;
+  right: 0;
+}
+
+.burgerMenu:hover span,
+.burgerMenu:hover span::before,
+.burgerMenu:hover span::after {
+  width: 25px;
+}
+
+.burgerMenu.active span::before,
+.burgerMenu.active span::after {
+  width: 25px;
+  background-color: #fff;
+  right: 0;
+}
+
+.burgerMenu.active span::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.burgerMenu.active span::after {
+  transform: rotate(-45deg);
+  bottom: 0;
+}
+
+.quoteButton {
+  display: none;
+}
+
+
+/* Larger screens */
+@media (min-width: 1025px) {
+ 
+  .burgerMenu {
+    display: none;
+  }
+
+  .branding {
+    flex: 0 1 auto;
+    margin-bottom: 0;
+  }
+
+  .logoImage {
+    width: 500px;
+    height: auto;
+  }
+
+  .navbarMenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    background-color: transparent;
+    backdrop-filter: none; /* Remove backdrop blur on desktop */
+    position: static;
+    top: auto;
+    left: auto;
+    width: auto;
+    height: auto;
+    border: none;
+    transition: top 0.3s ease-in-out;
+    z-index: 1100; /* Still above container */
+  }
+
+  .quoteButton {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #0770B5;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: medium;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border: none;
+    text-align: center;
+    flex: 0 1 auto;
+    width: auto;
+    margin-top: 0;
+    cursor: pointer;
+  }
+
+  .quoteButton:hover {
+    background-color: #06A3D7;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .scrolled {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-height: 60px; /* Min height to maintain header visibility */
+    height: auto; /* Allow height to adjust based on content */
+  }
+
+  .scrolled .logoImage {
+    width: 500px;
+    height: auto;
+  }
+}

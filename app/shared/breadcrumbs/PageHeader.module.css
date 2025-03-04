@@ -1,0 +1,110 @@
+/* Base Styles (Mobile First) */
+.headerContainer {
+  padding: 20px 15px; /* Reduced padding for mobile */
+  background: linear-gradient(
+    135deg,
+    #0770B5,
+    #0770B5,
+    #06A3D7
+  ); /* Abstract gradient background */
+  background-size: 200% 200%; /* Allows for a dynamic gradient effect */
+  animation: gradientAnimation 10s ease infinite; /* Animation for dynamic gradient */
+  color: #fff; /* Change text color to white for better contrast */
+  text-align: left; /* Default alignment */
+  margin-top: 9.5rem; /* Default for mobile */
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.headerContent {
+  max-width: 100%; /* Full width for mobile */
+  margin: 0; /* No additional centering margin */
+}
+
+.headerContent h1 {
+  font-size: 1.5rem; /* Smaller heading for mobile */
+  color: #ffffff; /* White heading color */
+  margin-bottom: 10px; /* Space below heading */
+  margin-left: 0.6rem;
+}
+
+.headerContent p {
+  font-size: 1rem; /* Smaller paragraph size for mobile */
+  color: rgba(255, 255, 255, 0.8); /* Semi-transparent paragraph color */
+  margin-bottom: 20px; /* Space below paragraph */
+  margin-left: 0.6rem;
+}
+
+.breadcrumb {
+  font-size: 14px; /* Slightly smaller breadcrumb size for mobile */
+  color: rgba(255, 255, 255, 0.7); /* Semi-transparent breadcrumb color */
+  margin-left: 0.6rem;
+}
+
+.breadcrumb a {
+  color: #ffffff; /* White link color */
+  text-decoration: none; /* Remove underline */
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.breadcrumb span {
+  color: rgba(255, 255, 255, 0.7); /* Semi-transparent span color */
+}
+
+/* Media queries for larger tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+ 
+  .headerContent h1 {
+    font-size: 2rem; /* Slightly larger heading for tablets */
+  }
+
+  .headerContent p {
+    font-size: 1.2rem; /* Slightly larger paragraph size */
+  }
+}
+
+/* Media queries for tablets and desktops */
+@media (min-width: 769px) and (max-width: 1024px) {
+ 
+  .headerContent h1 {
+    font-size: 2.25rem; /* Larger heading for tablets */
+  }
+
+  .headerContent p {
+    font-size: 1.3rem; /* Larger paragraph size */
+  }
+}
+
+/* Media queries for desktops */
+@media (min-width: 1025px) {
+  
+  .headerContainer {
+    margin-top: 13.5rem;
+  }
+
+  .headerContent {
+    max-width: 1200px; /* Restrict width for desktops */
+    margin: 0 auto; /* Center content */
+  }
+
+  .headerContent h1 {
+    font-size: 2.5rem; /* Default heading size */
+  }
+
+  .headerContent p {
+    font-size: 1.4rem; /* Default paragraph size */
+  }
+}

@@ -1,0 +1,146 @@
+.callButton {
+  position: fixed;
+  border-radius: 50%;
+  bottom: 6rem;
+  right: 2rem;
+  background: #25d366;
+  padding: 0.5rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: opacity 0.4s ease, transform 0.4s ease, right 0.4s ease;
+  animation: zoomAndFlash 1.5s infinite; /* Attention-catching pulse animation */
+  z-index: 100;
+}
+
+.callButton span {
+  margin-left: 10rem;
+}
+
+
+.callButton:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid #25d366;
+  opacity: 0.5;
+  animation: ring-circle-anim 1.2s infinite ease-in-out;
+  transition: all 0.5s;
+  transform-origin: 50% 50%;
+}
+
+.callButton:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background-color: #25d366;
+  border-radius: 50%;
+  border: none;
+  animation: ring-circle-fill-anim 2.3s infinite ease-in-out;
+  transition: all 0.5s;
+  transform-origin: 50% 50%;
+}
+
+.moveLeft {
+  right: auto;
+  left: 20px;
+}
+
+.icon {
+  animation: oscillate-rotation 1s infinite;
+}
+
+/* Zoom and Flash Animation for .elementor-icon */
+@keyframes zoomAndFlash {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 20px rgb(37, 211, 102) /* Changed the shadow color to green */
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+    box-shadow: 0 0 20px rgb(37, 211, 102) /* Changed the shadow color to green */
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 20px rgb(37, 211, 102) /* Changed the shadow color to green */
+  }
+}
+
+@keyframes oscillate-rotation {
+  0% {
+    transform: rotate(0) scale(1) skew(0deg);
+  }
+
+  10% {
+    transform: rotate(-25deg) scale(1) skew(0deg);
+  }
+
+  20% {
+    transform: rotate(25deg) scale(1) skew(0deg);
+  }
+
+  30% {
+    transform: rotate(-25deg) scale(1) skew(0deg);
+  }
+
+  40% {
+    transform: rotate(25deg) scale(1) skew(0deg);
+  }
+
+  50% {
+    transform: rotate(0) scale(1) skew(0deg);
+  }
+
+  100% {
+    transform: rotate(0) scale(1) skew(0deg);
+  }
+}
+
+@keyframes ring-circle-anim {
+  0% {
+    transform: rotate(0) scale(1.1) skew(0deg);
+    opacity: 0;
+  }
+
+  30% {
+    transform: rotate(0) scale(1.5) skew(0deg);
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: rotate(0) scale(1.7) skew(0deg);
+    opacity: 0.1;
+  }
+}
+
+
+@keyframes ring-circle-fill-anim {
+  0% {
+    transform: rotate(0) scale(1) skew(0deg);
+    opacity: 0.2;
+  }
+
+  50% {
+    transform: rotate(0) scale(1.4) skew(0deg);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: rotate(0) scale(1.1) skew(0deg);
+    opacity: 0.2;
+  }
+}

@@ -1,0 +1,124 @@
+/* components/FAQ.module.css */
+
+/* Mobile-first styles */
+.faqSection {
+  background-color: #fff;
+  margin: 0.2rem;
+  border-radius: 8px;
+  padding: 20px; /* Reduced padding for mobile */
+}
+
+.faqContainer {
+  width: 100%; /* Full width on mobile */
+  max-width: 100%; /* Restrict width */
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.faqTitle {
+  text-align: center;
+  font-size: 1.5rem; /* Optimized for mobile */
+  color: #0770B5;
+  margin-bottom: 20px;
+}
+
+.faqItem {
+  border-radius: 8px;
+  margin-bottom: 8px; /* Adjusted spacing */
+  overflow: hidden;
+}
+
+.faqQuestion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px; /* Optimized padding for mobile */
+  font-size: 1.2rem; /* Mobile-friendly font size */
+  color: #0770B5;
+  background-color: #f5f4f6;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.faqQuestion:hover {
+  background-color: #0770B5;
+  color: #fff;
+}
+
+.icon {
+  font-size: 20px; /* Slightly smaller icon for mobile */
+  color: #06A3D7;
+}
+
+.faqAnswer {
+  padding: 12px; /* Mobile-friendly padding */
+  font-size: 1rem; /* Mobile-friendly font size */
+  color: #0770B5;
+  background-color: #ffffff;
+  border-top: 1px solid #0770B5;
+}
+
+/* --------------------------------------------- */
+/* Tablet styles (min-width: 600px and max-width: 1024px) */
+/* --------------------------------------------- */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .faqSection {
+    padding: 30px; /* Slightly more padding for tablets */
+  }
+
+  .faqContainer {
+    max-width: 90%; /* Restrict container width */
+  }
+
+  .faqTitle {
+    font-size: 1.8rem; /* Larger title for tablets */
+    margin-bottom: 25px;
+  }
+
+  .faqQuestion {
+    font-size: 1.3rem; /* Slightly larger font size */
+    padding: 15px; /* Adjusted padding */
+  }
+
+  .icon {
+    font-size: 22px; /* Slightly larger icon */
+  }
+
+  .faqAnswer {
+    font-size: 1.2rem; /* Adjusted for better readability */
+    padding: 15px;
+  }
+}
+
+/* --------------------------------------------- */
+/* Desktop styles (min-width: 1025px) */
+/* --------------------------------------------- */
+@media (min-width: 1025px) {
+  .faqSection {
+    padding: 40px 20px; /* Restore original padding for desktop */
+  }
+
+  .faqContainer {
+    max-width: 1200px; /* Centralized and restricted width */
+  }
+
+  .faqTitle {
+    font-size: 2rem; /* Bold and prominent on desktop */
+    margin-bottom: 30px;
+  }
+
+  .faqQuestion {
+    font-size: 1.4rem; /* Larger font size for desktop */
+    padding: 20px; /* Spacious padding */
+  }
+
+  .icon {
+    font-size: 24px; /* Default icon size */
+  }
+
+  .faqAnswer {
+    font-size: 1.4rem; /* Restore desktop font size */
+    padding: 20px; /* Spacious padding */
+  }
+}

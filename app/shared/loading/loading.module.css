@@ -1,0 +1,27 @@
+/* Spinner.module.css */
+.loader {
+  border: 4px solid transparent; /* Outer border transparent */
+  border-top: 4px solid #0770B5; /* Color for the top border */
+  border-radius: 50%; /* Full circle */
+  width: 60px; /* Increased diameter for visibility */
+  height: 60px; /* Increased diameter for visibility */
+  animation: spin 0.8s linear infinite; /* Faster spin */
+  margin-top: 20px; /* Space between logo and loader */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); /* Start rotation */
+  }
+  100% {
+    transform: rotate(360deg); /* Complete rotation */
+  }
+}
+
+.loadingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Stack logo and loader vertically */
+  height: 100vh;
+}

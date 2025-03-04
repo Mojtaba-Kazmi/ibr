@@ -1,0 +1,105 @@
+/* Modal overlay */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+
+/* Modal content box */
+.modalContent {
+  background: linear-gradient(135deg, #e0f7fa, #fff);
+  border-radius: 12px;
+  padding: 2.5rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  color: #0770B5;
+  transform: scale(0.9);
+  animation: popUp 0.5s forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) { /* Mobile */
+  .modalContent {
+    margin: 2rem;
+    padding: 1.5rem;
+    max-width: 90%;
+    border-radius: 8px;
+  }
+  .h {
+    font-size: 1.5rem;
+  }
+  .p {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) { /* Tablets */
+  .modalContent {
+    padding: 2rem;
+    max-width: 80%;
+    border-radius: 10px;
+  }
+  .h {
+    font-size: 1.6rem;
+  }
+  .p {
+    font-size: 0.95rem;
+  }
+}
+
+
+
+/* Animation container to center the video */
+.animationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Success animation */
+.successAnimation {
+  width: 80px; /* Adjust size as needed */
+  height: 80px;
+  background-color: transparent !important; /* Force transparent */
+}
+
+/* Heading text */
+.h {
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+.p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Fade-in effect for the modal overlay */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Pop-up effect for the modal content */
+@keyframes popUp {
+  to {
+    transform: scale(1);
+  }
+}

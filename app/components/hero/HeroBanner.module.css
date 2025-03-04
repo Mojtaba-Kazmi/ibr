@@ -1,0 +1,63 @@
+/* Hero Banner Wrapper */
+.heroBannerWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0 0.2rem 0 0.2rem;
+  background: #fff; /* Optional fallback color */
+  border-radius: 0 0 8px 8px;
+  position: relative;
+  overflow: hidden;
+  /* background-image: url("/assets/images/home/hero-bg.webp"); */
+  background-size: cover; /* Default for large screens */
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* Overlay for better text readability */
+.heroBannerWrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.5); /* Overlay color */
+  z-index: 0; /* Below content */
+}
+
+/* Hero Banner Main Section */
+.heroBanner {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  gap: 3rem;
+  align-items: center;
+  padding: 13rem 0 1.7rem 0;
+  width: 100%;
+  position: relative;
+  z-index: 1; /* Ensure content is above the overlay */
+}
+
+/* Adjust background for medium screens (tablets) */
+@media (max-width: 1024px) {
+  .heroBannerWrapper {
+    background-size: cover; /* Ensure the whole image is visible */
+    background-position: left center; /* Adjust to show the top part of the image */
+  }
+
+  .heroBanner {
+    padding: 0;
+  }
+}
+
+/* Adjust background for small screens (mobile) */
+@media (max-width: 768px) {
+  .heroBannerWrapper {
+    background-size: cover; /* Fit the height while keeping aspect ratio */
+    background-position: center top; /* Focus on the top area */
+  }
+
+  .heroBanner {
+    padding: 9rem 0 2.5rem 0;
+  }
+}

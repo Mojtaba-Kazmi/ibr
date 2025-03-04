@@ -1,0 +1,157 @@
+.blogPostContainer {
+  position: relative; /* Ensure video and gradient stay within the container */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: hidden; /* Ensures video and gradient don’t overflow */
+  background-color: #ffff;
+  z-index: 10;
+  margin: 0.2rem; /* Apply margin to the wrapper */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Wrapper */
+.wrapper {
+  position: relative; /* Ensures video and gradient are positioned inside */
+  padding: 0.5rem;
+  border-radius: 8px; /* Rounded corners for the wrapper */
+  z-index: 100; /* Keep content above the video and gradient */
+  max-width: 1200px;
+}
+
+.heading {
+  display: flex;
+  justify-content: center; /* Use justify-content for horizontal centering */
+  align-items: center; /* This centers the items vertically */
+  text-align: center; /* Ensures text within child elements is centered */
+}
+
+/* Services Icon */
+.postIcon {
+  width: 350px; /* Fixed width */
+  height: 350px; /* Fixed height to match width */
+  border-radius: 50%; /* Makes it circular */
+  overflow: hidden; /* Hides any overflow */
+  display: flex; /* Use flex to center the image */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  margin: 0 auto; /* Center the icon horizontally */
+  margin-top: -60px; /* Adjust margin to give space above */
+}
+
+/* Adjust the Image component inside the Icon */
+.icon {
+  width: 100%; /* Fill the parent container */
+  height: 100%; /* Ensure it fills height */
+}
+
+/* Section heading */
+.blogPostContainer h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #0770B5; /* Dark text for heading */
+  margin-bottom: 40px;
+}
+
+/* Flex layout for blog posts */
+.postsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center; /* Center content */
+  gap: 70px 15px; /* Space between service cards */
+  margin-top: 90px; /* Adjust margin to give space above */
+}
+
+/* Individual post card */
+.postCard {
+  display: flex;
+  flex-direction: column; /* Stack icon and text vertically */
+  align-items: center; /* Center items */
+  text-align: center; /* Center text */
+  background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Add a blur effect to the background */
+  padding: 30px 0 30px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+  width: 100%; /* Full width for smaller screens */
+  max-width: 380px; /* Set a max width for each card */
+}
+
+.postCard:hover {
+  transform: translateY(-10px); /* Lift on hover */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* Elevated shadow */
+}
+
+/* Post title */
+.postCard h2 {
+  font-size: 1.4rem;
+  margin: 20px;
+  color: #0770B5;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Post meta information (date and author) */
+.postCard p {
+  margin: 2rem 2rem;
+  font-size: 1.2rem;
+  color: #333; /* Lighter text for meta */
+  line-height: 1.6;
+}
+
+.postCard time {
+  color: #0770B5; /* Grey text for date */
+}
+
+/* "Continue Reading" link */
+.readMore {
+  color: #0770B5 !important; /* Blue for the link */
+  font-weight: 600;
+  margin-top: 15px !important;
+  cursor: pointer;
+  font-size: 13px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.readMore:hover {
+  color: #06A3D7 !important; /* Darker blue on hover */
+  text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .postsGrid {
+    flex-direction: column; /* Stack the cards vertically on small screens */
+    justify-content: center; /* Center children vertically */
+    align-items: center; /* Center children horizontally */
+  }
+
+  .postCard {
+    margin-bottom: 20px; /* Space between service cards */
+  }
+
+  /* You can adjust the icon size for mobile if needed */
+  .postIcon {
+    width: 200px; /* Smaller width for mobile */
+    height: 200px; /* Smaller height for mobile */
+  }
+
+  /* Post title */
+  .postCard h2 {
+    font-size: 1.3rem;
+    margin: 20px;
+    color: #0770B5;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  .postCard p {
+    margin: 2rem 2rem;
+    font-size: 1rem;
+    color: #333; /* Lighter text for meta */
+    line-height: 1.6;
+  }
+}

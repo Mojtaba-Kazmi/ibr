@@ -1,0 +1,98 @@
+.footer {
+  background-color: #0770B5;
+  color: #fff;
+  width: 100%;
+  padding: 2rem 1rem; /* General padding */
+  box-sizing: border-box;
+  overflow: hidden; /* Prevent any content overflow */
+}
+
+/* General Container Styles */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1400px; /* Set max-width to 1200px */
+  margin: 0 auto; /* Center container */
+  padding: 2rem 0;
+}
+
+/* Mobile-specific adjustments (screens smaller than 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column; /* Stack sections vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  /* Center text on mobile/tablet */
+  .container > * {
+    text-align: center; /* This will center the text inside each child element */
+  }
+
+  /* Ensure Ads and Social Media remain centered on mobile/tablets */
+  .ads,
+  .logoSocialMedia {
+    text-align: center; /* Center these elements */
+    width: 100%; /* Make sure these elements take full width */
+  }
+
+  /* Center the button inside Ads */
+  .ads .button {
+    display: block;
+    margin: 0 auto; /* Center the button */
+  }
+
+  /* Center the social media icons */
+  .logoSocialMedia {
+    display: flex;
+    justify-content: center; /* Horizontally center social media icons */
+    align-items: center; /* Vertically center them */
+    width: 100%; /* Ensure social media icons take full width */
+  }
+
+  .logoSocialMedia > * {
+    margin: 0 10px; /* Add some spacing between icons */
+  }
+}
+
+/* Tablet-specific adjustments (screens between 600px and 1024px) */
+@media (max-width: 1024px) and (min-width: 600px) {
+  .container {
+    flex-direction: column; /* Stack sections vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 2rem 1rem; /* Adjust padding for tablet */
+    width: 100%; /* Allow the container to take more width on tablets */
+  }
+
+  /* Prevent elements from shrinking too small */
+  .logoSocialMedia {
+    text-align: center;
+    width: 80%; /* Ensure these elements are appropriately sized */
+    max-width: 700px; /* Limit the max-width to avoid too much shrinkage */
+  }
+
+  /* Ensure social media icons stay spaced out */
+  .logoSocialMedia {
+    display: flex;
+    justify-content: center; /* Horizontally center social media icons */
+    align-items: center; /* Vertically center them */
+    width: 100%; /* Make sure the icons take full width */
+  }
+
+  .logoSocialMedia > * {
+    margin: 0 10px; /* Add some spacing between icons */
+  }
+}
+
+/* Desktop Layout (1025px and up) */
+@media (min-width: 1025px) {
+  .container {
+    max-width: 1400px;
+    margin: 0 auto; /* Center container */
+    flex-direction: row; /* Align sections horizontally */
+    justify-content: left;
+    gap: 1rem;
+  }
+}

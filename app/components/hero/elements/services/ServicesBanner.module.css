@@ -1,0 +1,188 @@
+/* Main container for the Services section */
+.serviceContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Wrapper to align service items in a row */
+.serviceItemsWrapper {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.serviceItem {
+  position: relative; /* Necessary for pseudo-elements to position correctly */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  text-align: center;
+  z-index: 1; /* Ensures the content stays above */
+}
+
+.serviceItem::before {
+  content: ''; /* Necessary for pseudo-elements */
+  position: absolute;
+  top: -6px; /* Adjust for border width */
+  left: -6px; /* Adjust for border width */
+  width: calc(100% + 12px); /* Adjust for border width */
+  height: calc(100% + 12px); /* Adjust for border width */
+  border-radius: 50%; /* Makes the element circular */
+  background: linear-gradient(135deg, 
+  #0770B5, 
+  #0770B5, 
+  #06A3D7, 
+  #0770B5, 
+  #0770B5
+); /* Gradient colors */
+  background-size: 300% 300%;
+  animation: borderShine 5s linear infinite;
+  z-index: 0; /* Stays behind the content */
+}
+
+@keyframes borderShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Content inside serviceItem */
+.serviceItem img {
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+  z-index: 1; /* Ensures it's above the pseudo-element */
+}
+
+.serviceItem p {
+  margin: 0;
+  padding-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #ffffff;
+  z-index: 1; /* Ensures it's above the pseudo-element */
+}
+
+/* Styling for the button */
+.buttonContainer {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.btnGetQuote {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background-color: transparent; /* Darker blue for higher contrast */
+  color: #0770B5;
+  font-weight: bold;
+  font-size: medium;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  border: 0.3rem double #06A3D7;
+}
+
+.btnGetQuote:focus, .btnGetQuote:active {
+  border: 0.3rem solid #06A3D7; 
+  color: #0770B5;
+}
+
+.btnGetQuote:hover {
+  border: 0.3rem solid #0770B5; 
+  color: #06A3D7;
+}
+
+/* Responsive Adjustments */
+
+/* Small tablets and large mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .serviceItemsWrapper {
+    gap: 1rem; /* Reduce gap between items */
+  }
+
+  .serviceItem {
+    width: 120px;
+    height: 120px;
+  }
+
+  .serviceItem p {
+    font-size: 0.8rem; /* Adjust font size to fit better */
+  }
+
+  .btnGetQuote {
+    font-size: 0.9em;
+    padding: 0.4rem 1.2rem;
+  }
+}
+
+/* Small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .serviceContainer {
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .serviceItem {
+    width: 80px;
+    height: 80px;
+  }
+
+  .serviceItem img {
+    width: 80%; /* Adjust image size within circle */
+    height: auto;
+    object-fit: cover; /* Prevents image from being cropped */
+  }
+
+  .serviceItem p {
+    font-size: 0.75rem; /* Further reduce text size */
+  }
+}
+
+/* Larger tablets and small desktops (768px and above) */
+@media (min-width: 769px) {
+  .serviceItem {
+    width: 120px;
+    height: 120px;
+  }
+
+  .serviceItem p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Desktops and large screens (1024px and above) */
+@media (min-width: 1024px) {
+  .serviceItem {
+    width: 150px;
+    height: 150px;
+  }
+
+  .serviceItem p {
+    font-size: 1rem;
+  }
+}
+
+/* Larger tablets and small desktops (768px and above) */
+@media (max-width: 600px) {
+  .serviceItem {
+    width: 100px;
+    height: 100px;
+  }
+
+  .serviceItem p {
+    font-size: 0.9rem;
+  }
+}

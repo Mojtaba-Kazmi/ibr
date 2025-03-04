@@ -1,0 +1,48 @@
+/* styles/404.module.css */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff; /* Dark background color */
+    margin: 0;
+  }
+  
+  .content {
+    text-align: center;
+    padding: 20px;
+    background-color: #0770B5; /* Blue background for the box */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .heading {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+    color: #fff;
+  }
+  
+  .message {
+    font-size: 18px;
+    margin: 20px 0;
+    color: #fff;
+  }
+  
+  .return {
+    font-size: 16px;
+    color: #fff;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding-bottom: 2px;
+    transition: color 0.3s, border-color 0.3s;
+    cursor: pointer;
+  }
+  

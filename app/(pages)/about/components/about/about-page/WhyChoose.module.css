@@ -1,0 +1,205 @@
+/* -------------------------------------------- */
+/* Why Choose Section Styles - Mobile First */
+/* -------------------------------------------- */
+
+.whyChooseSection {
+  padding: 2rem; /* Mobile default padding */
+  background-color: #fff;
+  margin: 0.2rem;
+  border-radius: 8px;
+}
+
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%; /* Full width on mobile */
+  margin: 0 auto;
+  gap: 1rem;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 1.5rem; /* Slightly smaller for mobile */
+  font-weight: bold;
+  color: #0770B5;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+.companyInfo {
+  color: #0770B5;
+  font-size: 1rem;
+}
+
+/* Remove list bullets */
+.advantagesList {
+  display: flex;
+  flex-direction: column; /* Stacked on mobile */
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.advantageItem {
+  position: relative;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.016);
+  width: 100%; /* Full width on mobile */
+  max-width: 320px; /* Max width to avoid too-wide cards on larger mobiles */
+}
+
+.advantageItem:hover {
+  transform: translateY(-8px); /* Subtle hover effect */
+}
+
+.advantageItemIcon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: #0770B5; 
+}
+
+/* Image-specific styles */
+.iconImage {
+  width: 100px; /* Set a smaller size for the icon */
+  height: 100px;
+  object-fit: contain; /* Ensure image stays within its container */
+  margin: 0 auto; /* Center the image */
+}
+
+/* Title styles */
+.advantageItemTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+  color: #0770B5;
+}
+
+.advantageItemDescription {
+  font-size: 1rem;
+  color: #0770B5;
+}
+
+.indexNumber {
+  font-weight: bold;
+  color: #0770B5;
+  margin-right: 0.5rem;
+}
+
+/* -------------------------------------------- */
+/* Responsive Adjustments for Tablet (Small Tablets, e.g., iPad Mini, iPad) */
+/* -------------------------------------------- */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .whyChooseSection {
+    padding: 4rem; /* Increased padding for tablets */
+  }
+
+  .advantagesList {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .advantageItem {
+    flex: 1 1 45%; /* Each item will take up 45% of the container on tablet */
+    max-width: 320px;
+  }
+
+  .sectionTitle {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .advantageItem:hover {
+    transform: translateY(-10px);
+  }
+}
+
+/* -------------------------------------------- */
+/* Desktop and Larger Tablet Screens - Restore Original Layout */
+/* -------------------------------------------- */
+@media (min-width: 1025px) {
+  .whyChooseSection {
+    padding: 6rem;
+    background-color: #fff;
+    margin: 0.2rem; /* Simplified padding */
+    border-radius: 8px; /* Rounded corners */
+  }
+
+  .aboutContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .advantagesList {
+    display: flex;
+    flex-direction: row; /* Change to row for horizontal layout */
+    flex-wrap: wrap; /* Allow items to wrap */
+    gap: 1rem;
+    padding: 0;
+    list-style: none; /* Removes the bullet point */
+  }
+
+  .advantageItem {
+    position: relative;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.016);
+    flex: 0 1 calc(28.33% - 1.33rem); /* Adjust to 33.33% for 3 items per row with gap */
+    max-width: 380px; /* Ensures a maximum width for each item */
+  }
+
+  .advantageItem:hover {
+    transform: translateY(-10px);
+  }
+
+  .advantageItemIcon {
+    margin-bottom: 1rem; /* Space between icon and content */
+  }
+
+  .iconImage {
+    width: 100px; /* Slightly larger for desktop */
+    height: 100px;
+  }
+
+  .advantageItemTitle {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #0770B5;
+  }
+
+  .advantageItemDescription {
+    font-size: 1rem;
+    color: #333;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #0770B5;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .indexNumber {
+    font-weight: bold;
+    color: #0770B5; /* Custom color for the index number */
+    margin-right: 0.5rem;
+  }
+
+  .companyInfo {
+    color: #333;
+    font-size: 1.4rem;
+  }
+}

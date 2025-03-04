@@ -1,0 +1,167 @@
+/* Default (Mobile-first) styles */
+.servicesGrid {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping to the next row */
+  justify-content: center; /* Center content in the grid */
+  background-color: #ffffff; /* Background color for the grid */
+  box-sizing: border-box; /* Include padding in calculations */
+  gap: 25px; /* Reduced gap for mobile */
+}
+
+/* Wrapper container */
+.wrapper {
+  position: relative; /* Ensures video and gradient are positioned inside */
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin: 0.2rem; /* Apply margin to the wrapper */
+  padding: 0.5rem;
+}
+
+.heading {
+  display: flex;
+  justify-content: center; /* Use justify-content for horizontal centering */
+  align-items: center; /* This centers the items vertically */
+  text-align: center; /* Ensures text within child elements is centered */
+}
+
+/* Individual service card */
+.serviceCard {
+  background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent white */
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Stack icon and text vertically */
+  align-items: center; /* Center items */
+  padding: 0px 0 30px 0;
+  text-align: center;
+  flex: 1 1 100%; /* Single card per row by default */
+  max-width: 100%; /* Full width on mobile */
+  box-sizing: border-box;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
+}
+
+.serviceCard:hover {
+  transform: translateY(-10px); /* Lift on hover */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15); /* Elevated shadow */
+  cursor: pointer;
+}
+
+/* Service icon */
+.servicesIcon {
+  width: 450px; /* Default size for mobile */
+  height: 250px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  margin: 0 auto; /* Center the icon horizontally */
+}
+
+.servicesIcon img {
+  width: 100%; /* Fill the parent container */
+  height: 100%; /* Ensure it fills height */
+  object-fit: cover; /* Prevent image distortion */
+  border-radius: 8px;
+}
+
+/* Title */
+.serviceCard h2 {
+  font-size: 1.3rem; /* Smaller heading for mobile */
+  margin: 1rem 6rem;
+  color: #0770B5;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Paragraph */
+.serviceCard p {
+  margin: 0 1rem;
+  font-size: 1rem; /* Standard readable size for mobile */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Read More link */
+.readMore {
+  color: #0770B5 !important;
+  font-weight: 600;
+  margin-top: 15px !important;
+  cursor: pointer;
+  font-size: 10px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.readMore:hover {
+  color: #06A3D7 !important;
+  text-decoration: none;
+}
+
+/* Tablet-specific adjustments */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .servicesGrid {
+    gap: 20px; /* Adjusted gap for tablets */
+    max-width: 90%; /* Restrict grid width for tablets */
+    margin: 0 auto; /* Center the grid */
+  }
+
+  .serviceCard {
+    flex: 1 1 calc(50% - 20px); /* Two cards per row on tablet */
+    max-width: calc(50% - 20px);
+    padding: 0px 0 20px 0; /* Adjusted padding for better spacing */
+  }
+
+  .servicesIcon {
+    width: 450px; /* Slightly smaller for tablets */
+    height: 250px;
+  }
+
+  .serviceCard h2 {
+    font-size: 1.4rem; /* Adjusted heading size for tablets */
+    margin: 1rem 5rem; /* Adjusted margin for better spacing */
+  }
+
+  .serviceCard p {
+    font-size: 1rem; /* Slightly smaller text for tablets */
+  }
+
+  .readMore {
+    font-size: 12px; /* Slightly larger link text */
+  }
+}
+
+/* For larger screens (desktops) */
+@media (min-width: 1025px) {
+  .servicesGrid {
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 15px; /* Space between items */
+  }
+
+  .serviceCard {
+    flex: 1 1 calc(33.333% - 20px); /* Three cards per row */
+    max-width: calc(33.333% - 20px);
+  }
+
+  .servicesIcon {
+    width: 400px; /* Default size for mobile */
+    height: 250px;
+  }
+
+  /* Title */
+  .serviceCard h2 {
+    font-size: 1.4rem; /* Smaller heading for mobile */
+    margin: 1rem 2rem;
+    color: #0770B5;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  /* Paragraph */
+  .serviceCard p {
+    margin: 0 2rem;
+    font-size: 1.2rem; /* Standard readable size for mobile */
+    color: #333;
+    line-height: 1.6;
+  }
+}

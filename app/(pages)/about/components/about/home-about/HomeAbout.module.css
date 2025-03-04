@@ -1,0 +1,170 @@
+/* Base styling (applies to mobile by default) */
+.container {
+  padding: 0.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  margin: 0.2rem; /* Apply margin to the wrapper */
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem; /* Optional padding for spacing */
+  box-sizing: border-box;
+}
+
+/* Flex container for inner content alignment */
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%; /* This ensures it takes the full width of the wrapper */
+}
+
+.textContent {
+  flex: 1;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+.imageContent {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.description {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.description h2 {
+  padding-bottom: 0.5rem;
+  font-weight: bold;
+  color: #0770B5;
+  font-size: 1.5rem;
+}
+
+.description p {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Section-specific spacing */
+.section {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.experienceSection,
+.localServicesSection {
+  margin-bottom: 2rem;
+}
+
+.whyChooseSection {
+  margin-top: 2rem;
+}
+
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #0770B5; /* Darker blue for higher contrast */
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  font-size: medium;
+  margin-top: 1rem;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+.button:hover {
+  border: none; 
+  color: #fff;
+  background-color: #06A3D7;
+}
+
+/* Tablet-specific styles */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .homeContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 1200px;
+  }
+
+  .imageContent {
+    flex: 0 0 600px; /* Set the width of the image container */
+  }
+
+  .image {
+    max-height: 1000px;
+  }
+
+  .description h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Large screens (desktops) */
+@media (min-width: 1025px) {
+  /* Wrapper with max-width constraint */
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  /* Flex container for inner content alignment */
+  .homeContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    width: 100%; /* This ensures it takes the full width of the wrapper */
+  }
+
+  .imageContent {
+    flex: 0 0 400px;
+  }
+
+  .image {
+    max-height: 1600px;
+  }
+
+  .description h2 {
+    font-size: 2rem;
+  }
+
+  .description p {
+    font-size: 1.4rem;
+  }
+
+  .textContent {
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    margin-right: 3rem;
+  }
+}

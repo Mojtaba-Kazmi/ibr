@@ -1,0 +1,110 @@
+/* Container styles */
+.container {
+  background-color: #fff; /* White background */
+  border-radius: 8px; /* Border radius for rounded corners */
+  margin: 0.2rem; /* Apply margin to the wrapper */
+  max-width: none; /* Allow full width */
+  box-sizing: border-box; /* Include padding and border in element's total width */
+}
+
+/* Wrapper styles */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%; /* Make sure the wrapper takes full width */
+  max-width: 1200px; /* Set a maximum width for large screens */
+  margin: 0 auto; /* Center the wrapper */
+  box-sizing: border-box; /* Include padding in total width */
+  padding: 2rem;
+}
+
+.heading {
+  display: flex;
+  justify-content: center; /* Use justify-content for horizontal centering */
+  align-items: center; /* This centers the items vertically */
+  text-align: center; /* Ensures text within child elements is centered */
+}
+
+/* Form styling */
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Space between form fields */
+  width: 100%; /* Make sure the form takes the full width */
+}
+
+/* Submit button styling */
+.submitContainer {
+  display: flex;
+  justify-content: left;
+}
+
+.submitButton {
+  padding: 0.75rem 1.5rem; /* Add padding for a larger button */
+  font-size: medium; /* Font size */
+  background-color: #0770B5; /* Darker blue for higher contrast */
+  color: #fff; /* Button text color */
+  border: none;
+  border-radius: 5px; /* Button border radius */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:disabled {
+  background-color: #ccc; /* Disable state */
+  cursor: not-allowed;
+}
+
+.submitButton:hover:enabled {
+  background-color: #0770B5;
+  color: #fff;
+}
+
+.errorText {
+  color: red;
+}
+
+.mathCaptchaContainer {
+  margin: 20px 0;
+}
+
+.captchaLabel {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #333;
+  display: block;
+}
+
+.captchaInput {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Responsive Styling for smaller screens */
+@media (max-width: 768px) {
+
+  .wrapper {
+    padding: 2rem;
+  }
+
+  .container {
+    padding: 0.5rem;
+  }
+
+  .contactForm {
+    gap: 0.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Adjust the reCAPTCHA container on smaller screens */
+  .recaptchaContainer {
+    width: 100%;
+    max-width: 4rem;
+    transform: scale(0.7);
+  }
+}

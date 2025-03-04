@@ -1,0 +1,17 @@
+body {
+  background-color: rgb(245, 244, 246);
+  margin: 0; /* Reset default margin */
+  padding: 0; /* Reset default padding */
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body,
+html {
+  overflow-x: hidden; /* Prevent horizontal overflow across the page */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

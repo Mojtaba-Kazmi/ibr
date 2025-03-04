@@ -1,0 +1,121 @@
+/* Logo styling */
+.section {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.logo img {
+  margin: 0;
+  filter: invert(0%) brightness(100%);
+}
+
+.contactInfo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.contactDetails p a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contactNumber {
+  position: relative; /* For positioning the pseudo-element */
+  background-color: transparent; /* Background color of the button */
+  font-size: 1.4rem;
+  color: #fff !important;
+  border-radius: 5px;
+  margin: 1rem;
+  display: flex;
+  align-items: center; /* Align items (icon + text) vertically */
+  text-align: center;
+  color: #fff;
+}
+
+
+.contactNumber a {
+  text-decoration: none; /* Remove underline from the link */
+  color: #fff; /* Ensure consistent text color */
+  display: flex;
+  align-items: center; /* Center-align within the link itself */
+  text-align: center;
+}
+
+.icon {
+  font-size: 2rem; /* Increase icon size */
+  margin-right: 0.6rem;
+}
+
+.legal a {
+  color: #fff; /* Match header link color */
+  text-decoration: none;
+}
+
+.legal a:hover {
+  text-decoration: none;
+}
+
+.socials {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Ensure icons are aligned vertically */
+  gap: 1rem; /* Adjust spacing between icons */
+  margin-top: 1rem;
+}
+
+.socials a {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+/* Find Us link */
+.findUs {
+  margin-top: 1rem;
+  align-self: center; /* Align to the start of the container */
+}
+
+.findUs a {
+  color: #fff; /* Match header link color */
+  text-align: left; /* Align text to the left */
+  text-decoration: none;
+}
+
+.findUs a:hover {
+  text-decoration: none;
+}
+
+.legal {
+  cursor: pointer;
+}
+
+/* Large screen desktops (1025px and up) */
+@media (min-width: 1025px) {
+  .logo img {
+    margin: 0;
+  }
+
+  .socials {
+    display: flex;
+    justify-content: left; /* Center horizontally */
+    align-items:flex-start; /* Ensure icons are aligned vertically */
+    gap: 1rem; /* Adjust spacing between icons */
+    margin-top: 1rem;
+  }
+  
+  .socials a {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+
+  .contactNumber {
+    margin-left: 0;
+  }
+
+  .findUs {
+    margin-top: 1rem;
+    align-self: flex-start; /* Align to the start of the container */
+  }
+}
+

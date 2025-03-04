@@ -1,0 +1,76 @@
+/* Form Field */
+.formField {
+  position: relative;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+/* Styles for the message textarea */
+.textareaField {
+  width: 100%;
+  min-height: 150px;
+  padding: 1rem;
+  resize: vertical;
+  border: 1px solid #cbcbcb;
+  outline: none;
+  font-size: 1rem;
+}
+
+/* Input Field */
+.input {
+  width: 100%;
+  padding: 1rem 1rem;
+  border: 0.5px solid #cbcbcb;
+  border-radius: 6px;
+  outline: none;
+  font-size: 1rem;
+  line-height: 1.5;
+  background-color: #ffffff; /* Input background */
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Floating Label */
+.label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #777676;
+  font-size: 1.2rem;
+  pointer-events: none;
+  transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all; /* Safari */
+  padding: 0 5px;
+  z-index: 1;
+  background-color: transparent; /* Dynamically inherits input background */
+}
+
+/* Add fallback class for floating label */
+.label.float {
+  top: -12px;
+  font-size: 1rem;
+  color: #0770B5;
+  transform: translateY(-50%) translateZ(0);
+}
+
+
+/* Input Focus or Value - Float Label */
+.input:focus ~ .label,
+.input.filled ~ .label {
+  top: -12px;
+  font-size: 1rem;
+  color: #0770B5;
+}
+
+/* Floating Label Border Adjustment */
+.input:focus,
+.input:not(:placeholder-shown) {
+  border: 2px solid #0770B5;
+}
+
+/* Error Text */
+.errorText {
+  color: #d32f2f;
+  font-size: 0.9rem;
+}

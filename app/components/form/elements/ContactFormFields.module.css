@@ -1,0 +1,23 @@
+/* Default (Mobile): Full width */
+.formRow {
+  display: block;
+}
+
+.formRow > * {
+  margin-bottom: 2.5rem; /* Add space between form fields on mobile */
+}
+
+.message {
+  padding-top: 3rem;
+}
+/* Larger screens: Display form fields side by side */
+@media (min-width: 768px) {
+  .formRow {
+    display: flex;
+    gap: 1rem; /* Space between fields */
+  }
+  
+  .formRow > * {
+    margin-bottom:1.5rem; /* Remove margin on larger screens */
+  }
+}

@@ -1,0 +1,122 @@
+/* ProjectNavigator.module.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  background-color: rgba(255, 255, 255, 0.01);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 1rem;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden; /* Hide overflow to show only one image */
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%; /* Ensure it takes full width */
+}
+
+.slide {
+  min-width: 100%; /* Display one image at a time */
+  flex-shrink: 0;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0770b5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
+  cursor: pointer;
+  border: none; /* Removes border */
+  outline: none; /* Removes focus outline */
+}
+
+.buttonLeft {
+  left: 16px;
+}
+
+.buttonRight {
+  right: 16px;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button:hover {
+  background-color: #06a3d7;
+}
+
+.textContainer {
+  margin-top: 1rem;
+  text-align: center;
+  color: #000;
+}
+
+.title {
+  font-size: 2rem;
+  padding: 0 1rem 0 1rem;
+  font-weight: bold;
+  color: #0770b5;
+}
+
+.description {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  padding: 0 1rem 0 1rem;
+}
+
+.logoImage {
+  width: 250px;
+  height: auto;
+  margin: 1rem 0 0 0;
+}
+@media (max-width: 1600px) {
+  .container {
+    max-width: 70%; /* Adjust for 15-inch laptops */
+  }
+}
+
+@media (max-width: 1440px) {
+  .container {
+    max-width: 95%; /* Adjust for 13-inch laptops */
+  }
+}
+
+@media (min-width: 1600px) {
+  .description {
+    margin-top: 0.5rem;
+    font-size: 1.4rem;
+  }
+}

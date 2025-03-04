@@ -1,0 +1,193 @@
+/* Main page layout */
+.blogPage {
+  display: flex;
+  flex-direction: column; /* Default to column for mobile */
+  margin-top: 160px; /* Added margin to push the header down */
+  background-color: white; /* Set background color to white */
+  border-radius: 8px;
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+}
+
+/* Wrapper to center content */
+.wrapper {
+  display: flex;
+  flex-direction: column; /* Default to column for mobile */
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 100%; /* Full width on mobile */
+}
+
+/* Blog post list styling */
+.blogPostList ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.blogPostList ul li {
+  margin: 15px 0px;
+}
+
+/* Blog post list link styles */
+.blogPostList ul li p {
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  display: block;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease; /* Added transition for hover effect */
+  backdrop-filter: blur(10px); /* Soft glass effect */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.419
+  ); /* Semi-transparent background for glass effect */
+}
+
+.blogPostList ul li p:hover,
+.blogPostList ul li p.active {
+  background-color: rgba(
+    45,
+    173,
+    226,
+    0.7
+  ); /* Applying #2dade2 with 0.7 opacity */
+  color: #000;
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* Contact section styling */
+.contactSection {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #0770B5;
+  text-align: center;
+  color: #fff;
+}
+
+.contactSection h3 {
+  margin-bottom: 10px;
+}
+
+.contactSection button {
+  background-color: #0770B5;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.contactSection button:hover {
+  background-color: #06A3D7;
+}
+
+/* Main content styles */
+.mainContent {
+  width: 100%; /* Full width on mobile */
+}
+
+/* Blog details styling */
+.blogDetail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.blogHeader {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.blogTitle {
+  font-size: 28px; /* Smaller font size on mobile */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.blogMeta {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Image styles */
+.imageContainer {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.thumbnail {
+  border-radius: 8px;
+  width: 100%; /* Ensure the image takes the full width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover to fill the container */
+}
+
+/* Blog content styles */
+.blogContent {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.blogContent ul {
+  font-size: 18px;
+  line-height: 1.8;
+  margin: 30px;
+  list-style-type: none;
+}
+
+/* Responsive design for larger screens */
+@media (min-width: 769px) {
+  .blogPage {
+    flex-direction: row; /* Change to row for larger screens */
+    padding: 6rem; /* 6rem for larger screens */
+  }
+
+  .sidebar {
+    width: 25%; /* Sidebar takes up 25% on larger screens */
+    border-right: solid 2px #f5f4f6;
+    padding: 0rem 0.5rem;
+  }
+
+  .mainContent {
+    width: 75%; /* Main content takes up 75% on larger screens */
+  }
+
+  .blogTitle {
+    font-size: 36px; /* Maintain size on larger screens */
+    text-align: left;
+  }
+
+  .wrapper {
+    flex-direction: row; /* Change to row for larger screens */
+    text-align: left;
+  }
+
+  .contactSection {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f5f4f6;
+    color: #000;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  /* Image styles */
+  .imageContainer {
+    text-align: center;
+    margin: 20px 0;
+    width: 300px;
+  }
+}
