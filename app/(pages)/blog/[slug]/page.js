@@ -8,12 +8,12 @@ export async function generateMetadata({ params }) {
   // Prioritize `excerpt` for meta description and fallback to a default value
   const description =
     blog.excerpt ||
-    "Discover expert walling services in Adelaide, including brick repairs, rendering, texture coatings, and more to improve your property.";
+    "Discover expert bathroom renovation services in Melbourne, including kitchen renovations, balcony repairs, tiling, waterproofing, and more to enhance your home.";
 
   // Use the blog thumbnail or a default image for OpenGraph
   const imageUrl = blog.thumbnail
-  ? `https://www.hqws.com.au${blog.thumbnail}`
-  : "https://res.cloudinary.com/dmrdlnzkm/image/upload/v1737897009/HQWS-Logo-web_mhb0ic.svg";
+  ? `https://www.innovatebathroomrenovations.com.au/${blog.thumbnail}`
+  : "https://res.cloudinary.com/den67ouct/image/upload/v1740956083/IBR_logo_yto9od.png";
 
   // Return metadata structure for SEO & Open Graph
   return {
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: blog.title,
       description,
-      url: `https://hqws.com.au/blog/${slug}`,
+      url: `https://www.innovatebathroomrenovations.com.au//blog/${slug}`,
       images: [
         {
           url: imageUrl,

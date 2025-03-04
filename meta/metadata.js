@@ -9,7 +9,7 @@ export const defaultMetadata = {
     url: "https://innovatebathroomrenovations.com.au/",
     images: [
       {
-        url: "https://res.cloudinary.com/den67ouct/image/upload/v1740960597/IBR_ii2xqi.png",
+        url: "https://res.cloudinary.com/den67ouct/image/upload/v1740956083/IBR_logo_yto9od.png",
         width: 1200,
         height: 630,
         alt: "Innovate Bathroom Renovations",

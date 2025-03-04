@@ -39,10 +39,10 @@ export async function generateMetadata(context) {
       openGraph: {
         title: `${data.title} | Inovate Bathroom Renovations`,
         description: data.excerpt || "Explore professional and high-quality bathroom and home renovation services in Melbourne, from bathroom renovations to tiling and more with Innovate Bathroom Renovations.",
-        url: `https://innovatebathroomrenovations.com.au/services/${slug}`,
+        url: `https://www.innovatebathroomrenovations.com.au//services/${slug}`,
         images: [
           {
-            url: data.thumbnail ? `${data.thumbnail}` : "https://res.cloudinary.com/den67ouct/image/upload/v1740960597/IBR_ii2xqi.png",
+            url: data.thumbnail ? `${data.thumbnail}` : "https://res.cloudinary.com/den67ouct/image/upload/v1740956083/IBR_logo_yto9od.png",
             width: 1200,
             height: 630,
             alt: `Thumbnail for the service: ${data.title}`,

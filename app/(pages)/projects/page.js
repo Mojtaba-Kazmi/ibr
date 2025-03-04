@@ -14,7 +14,7 @@ export const metadata = generatePageMetadata({
       "Discover the latest projects completed by Innovate Bathroom Renovations, including bathroom renovations, kitchen makeovers, and balcony restorations across Melbourne.",
     images: [
       {
-        url: "https://res.cloudinary.com/den67ouct/image/upload/v1740960597/IBR_ii2xqi.png",
+        url: "https://res.cloudinary.com/den67ouct/image/upload/v1740956083/IBR_logo_yto9od.png",
         width: 1200,
         height: 630,
         alt: "Innovate Bathroom Renovations Projects",
