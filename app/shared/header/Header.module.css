@@ -38,15 +38,15 @@
 }
 
 .scrolled .logoImage {
-  width: 300px; 
+  width: 170px; 
   height: auto; 
-  margin: 1rem 0 0 0;
+  margin: 0 0 0 1rem;
 }
 
 .logoImage {
-  width: 300px !important;
+  width: 170px !important;
   height: auto;
-  margin: 1rem 0 0 0;
+  margin: 0 0 0 1rem;
 }
 
 /* Fullscreen Navbar */
@@ -170,7 +170,7 @@
   }
 
   .logoImage {
-    width: 500px;
+    width: 250px !important;
     height: auto;
   }
 
@@ -227,4 +227,5 @@
     width: 500px;
     height: auto;
   }
+
 }

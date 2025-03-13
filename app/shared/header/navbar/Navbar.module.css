@@ -29,7 +29,7 @@
   padding: 15px 20px;
   text-decoration: none;
   font-size: 20px;
-  color: #0770B5; /* White text on mobile menu */
+  color: #0770b5; /* White text on mobile menu */
   cursor: pointer;
   transition: background-color 0.2s ease;
   width: 100%;
@@ -65,7 +65,7 @@
 .submenuLink {
   text-decoration: none;
   font-size: 16px;
-  color: #0770B5;
+  color: #0770b5;
   transition: color 0.2s ease;
 }
 
@@ -135,13 +135,24 @@
     position: relative;
     height: auto;
     background-color: transparent; /* Transparent background */
+    gap: 40px;
   }
 
   .navLink {
     font-weight: 600;
     padding: 10px 20px;
-    color: #0770B5; /* Dark text for desktop */
+    color: #fff; /* Dark text for desktop */
     background-color: transparent;
+  }
+
+  .navLink:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+    border-radius: 5px;
+  }
+
+  .scrolledNavLink {
+    color: #065695; /* Change to your preferred scrolled color */
+    transition: color 0.3s ease;
   }
 
   /* Hover effect for large screens */
@@ -183,11 +194,11 @@
 
   .submenuLink {
     font-size: 16px;
-    color: #0770B5;
+    color: #0770b5;
   }
 
   .submenuLink:hover {
-    color: #06A3D7; /* Dark hover color */
+    color: #06a3d7; /* Dark hover color */
   }
 
   /* Arrow for dropdowns */

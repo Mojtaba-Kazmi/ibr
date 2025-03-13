@@ -71,6 +71,7 @@ export default function Header() {
           <Navbar
             isMenuOpen={isMenuOpen}
             onCloseMenu={() => setMenuOpen(false)}
+            isScrolled={isScrolled}
           />
         </div>
 

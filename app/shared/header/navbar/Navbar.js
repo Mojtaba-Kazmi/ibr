@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from "./Navbar.module.css";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
-export default function Navbar({ isMenuOpen, onCloseMenu }) {
+export default function Navbar({ isMenuOpen, onCloseMenu, isScrolled }) {
   const [animationKey, setAnimationKey] = useState(Date.now());
   const [openSubmenu, setOpenSubmenu] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
@@ -79,7 +79,7 @@ export default function Navbar({ isMenuOpen, onCloseMenu }) {
             onMouseLeave={() => !isMobile && setOpenSubmenu(null)}
           >
             <div
-              className={styles.navLink}
+              className={`${styles.navLink} ${isScrolled ? styles.scrolledNavLink : ""}`}
               onClick={(e) => {
                 if (item.submenu) {
                   handleSubmenuToggle(e, item);

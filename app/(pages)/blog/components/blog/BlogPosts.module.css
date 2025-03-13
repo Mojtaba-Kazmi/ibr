@@ -27,7 +27,6 @@
   text-align: center; /* Ensures text within child elements is centered */
 }
 
-/* Services Icon */
 .postIcon {
   width: 350px; /* Fixed width */
   height: 350px; /* Fixed height to match width */
@@ -136,8 +135,8 @@
 
   /* You can adjust the icon size for mobile if needed */
   .postIcon {
-    width: 200px; /* Smaller width for mobile */
-    height: 200px; /* Smaller height for mobile */
+    width: 320px; /* Smaller width for mobile */
+    height: 320px; /* Smaller height for mobile */
   }
 
   /* Post title */

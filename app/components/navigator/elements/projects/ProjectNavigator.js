@@ -21,13 +21,6 @@ export default function ProjectNavigator() {
   return (
     <>
       <div className={styles.textContainer}>
-        <CldImage
-          src="IBR_ii2xqi"
-          className={styles.logoImage}
-          width={500}
-          height={100}
-          alt="innovatebathroomrenovations"
-        />
         <h2 className={styles.title}>{title}</h2>
         <p className={styles.description}>{description}</p>
       </div>

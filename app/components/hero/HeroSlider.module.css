@@ -1,0 +1,96 @@
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 80vh; /* Default height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100vh;
+  }
+
+  .callButton {
+    font-size: 1.1rem !important;
+  }
+}
+
+.swiperContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  width: 100%;
+  min-height: 100vh;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35); /* Slightly darker overlay */
+}
+
+.textOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.subtitle {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+.callButton {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #0770B5;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.callButton:hover {
+  background-color: #081333;
+}
+
+/* Smaller height on big screens */
+@media (min-width: 1024px) {
+  .hero {
+    min-height: 100vh !important; /* Ensure it applies */
+  }
+
+  .image {
+    height: 100vh !important;
+    min-height: 100vh !important;
+  }
+
+  .title {
+    font-size: 5rem !important;
+  }
+}

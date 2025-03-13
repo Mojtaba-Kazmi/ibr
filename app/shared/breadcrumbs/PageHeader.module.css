@@ -1,110 +1,103 @@
 /* Base Styles (Mobile First) */
 .headerContainer {
-  padding: 20px 15px; /* Reduced padding for mobile */
-  background: linear-gradient(
-    135deg,
-    #0770B5,
-    #0770B5,
-    #06A3D7
-  ); /* Abstract gradient background */
-  background-size: 200% 200%; /* Allows for a dynamic gradient effect */
-  animation: gradientAnimation 10s ease infinite; /* Animation for dynamic gradient */
-  color: #fff; /* Change text color to white for better contrast */
-  text-align: left; /* Default alignment */
-  margin-top: 9.5rem; /* Default for mobile */
+  position: relative;
+  padding: 160px 15px 20px 15px;
+  background: url('https://res.cloudinary.com/den67ouct/image/upload/v1740958353/grouting_qn0vpb.jpg') no-repeat center center/cover;
+  color: #fff;
+  text-align: left;
+  overflow: hidden;
 }
 
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+/* Overlay Effect */
+.headerContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
 }
 
+/* Ensures text is above the overlay */
 .headerContent {
-  max-width: 100%; /* Full width for mobile */
-  margin: 0; /* No additional centering margin */
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+  margin: 0;
 }
 
 .headerContent h1 {
-  font-size: 1.5rem; /* Smaller heading for mobile */
-  color: #ffffff; /* White heading color */
-  margin-bottom: 10px; /* Space below heading */
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 10px;
   margin-left: 0.6rem;
 }
 
 .headerContent p {
-  font-size: 1rem; /* Smaller paragraph size for mobile */
-  color: rgba(255, 255, 255, 0.8); /* Semi-transparent paragraph color */
-  margin-bottom: 20px; /* Space below paragraph */
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
   margin-left: 0.6rem;
 }
 
 .breadcrumb {
-  font-size: 14px; /* Slightly smaller breadcrumb size for mobile */
-  color: rgba(255, 255, 255, 0.7); /* Semi-transparent breadcrumb color */
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
   margin-left: 0.6rem;
 }
 
 .breadcrumb a {
-  color: #ffffff; /* White link color */
-  text-decoration: none; /* Remove underline */
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .breadcrumb a:hover {
-  text-decoration: underline; /* Underline on hover */
+  text-decoration: underline;
 }
 
 .breadcrumb span {
-  color: rgba(255, 255, 255, 0.7); /* Semi-transparent span color */
-}
-
-/* Media queries for larger tablets */
-@media (min-width: 481px) and (max-width: 768px) {
- 
-  .headerContent h1 {
-    font-size: 2rem; /* Slightly larger heading for tablets */
-  }
-
-  .headerContent p {
-    font-size: 1.2rem; /* Slightly larger paragraph size */
-  }
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* Media queries for tablets and desktops */
-@media (min-width: 769px) and (max-width: 1024px) {
- 
+@media (min-width: 481px) and (max-width: 768px) {
   .headerContent h1 {
-    font-size: 2.25rem; /* Larger heading for tablets */
+    font-size: 2rem;
   }
 
   .headerContent p {
-    font-size: 1.3rem; /* Larger paragraph size */
+    font-size: 1.2rem;
   }
 }
 
-/* Media queries for desktops */
-@media (min-width: 1025px) {
-  
-  .headerContainer {
-    margin-top: 13.5rem;
-  }
-
-  .headerContent {
-    max-width: 1200px; /* Restrict width for desktops */
-    margin: 0 auto; /* Center content */
-  }
-
+@media (min-width: 769px) and (max-width: 1024px) {
   .headerContent h1 {
-    font-size: 2.5rem; /* Default heading size */
+    font-size: 2.25rem;
   }
 
   .headerContent p {
-    font-size: 1.4rem; /* Default paragraph size */
+    font-size: 1.3rem;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1025px) {
+  .headerContainer {
+    margin-top: 0rem;
+  }
+
+  .headerContent {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .headerContent h1 {
+    font-size: 2.5rem;
+  }
+
+  .headerContent p {
+    font-size: 1.4rem;
   }
 }

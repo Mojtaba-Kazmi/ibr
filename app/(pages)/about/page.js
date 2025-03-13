@@ -20,7 +20,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHeader
-        title="About Innovate Bathroom Renovations"
+        title="About us"
         description="Specialists in high-quality bathroom and home renovations across Melbourne and its suburbs. We deliver expert craftsmanship in bathroom and kitchen renovations, tiling, waterproofing, and more."
         breadcrumb="About Page"
       />

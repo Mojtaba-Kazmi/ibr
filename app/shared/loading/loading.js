@@ -9,8 +9,8 @@ export default function Loading() {
     <div className={styles.loadingContainer}>
       <CldImage 
         src="IBR_ii2xqi"
-        width={500}
-        height={200}
+        width={300}
+        height={120}
         alt="Innovate Bathroom Renovations"
       />
       <div className={styles.loader}></div>
